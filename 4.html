@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .panel {
+            width: 240px;
+            margin: 50px auto;
+        }
+
+        .kutu {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin: 5px;
+            text-align: center;
+            border: solid 2px red;
+            float: left;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="panel">
+        <div class="kutu">1</div>
+        <div class="kutu">2</div>
+        <div class="kutu">3</div>
+        <div class="kutu">4</div>
+        <div class="kutu">5</div>
+        <div class="kutu">6</div>
+        <div class="kutu">7</div>
+        <div class="kutu">8</div>
+        <div class="kutu">9</div>
+        <div class="kutu">10</div>
+        <div class="kutu">11</div>
+        <div class="kutu">12</div>
+    </div>
+
+    <script>
+        const kutular = document.querySelectorAll(".kutu");
+
+        for (var i = 0; i < kutular.length; i++) {
+            kutular[i].onmouseover = function () {
+                console.log("deneme");
+                if (this.style.backgroundColor == "red") 
+                {
+                    this.style.backgroundColor = "white";
+                }
+                else 
+                {
+                    this.style.backgroundColor = "red";
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
